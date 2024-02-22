@@ -1,0 +1,32 @@
+{
+  "name": "faspexgatewaytest",
+  "version": "1.0.0",
+  "description": "Package to test the Faspex Gateway SDK with NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnStigter/faspexgatewaytest.git"
+  },
+  "keywords": [
+    "faspex",
+    "sdk",
+    "http-gateway"
+  ],
+  "author": "John Stigter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnStigter/faspexgatewaytest/issues"
+  },
+  "homepage": "https://github.com/JohnStigter/faspexgatewaytest#readme",
+  "dependencies": {
+    "@ibm-aspera/http-gateway-sdk-js": "^7.7.3",
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19"
+  }
+}
