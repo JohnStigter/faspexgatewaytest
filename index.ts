@@ -1,6 +1,7 @@
 import { asperaHttpGateway } from "@ibm-aspera/http-gateway-sdk-js";
 import { HttpGateway } from "@ibm-aspera/http-gateway-sdk-js/commonjs/models/http-gateway-global.model";
 const FASPEX_GATEWAY_HOST = "https://filetransfer.ont.belastingdienst.nl";
+const FASPEX_HOST = "https://filetransfer.ont.belastingdienst.nl";
 const BEARER_TOKEN =
   "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6IiIsImV4cCI6MTcwODY1MzA0MywiYXVkIjoiMTQxMjk4NTgtNDQxMi00M2E4LTgxMDMtMTFhZjFmMmVkOWY4IiwianRpIjoiMjAzMDQ5IiwiaWF0IjoxNzA4NjA5ODQzLCJzdWIiOiJ1c2VyOjIiLCJuYW1lIjoiQlRBZG1pbiIsImVtYWlsIjoiZmlsZXRyYW5zZmVyQGJlbGFzdGluZ2RpZW5zdC5ubCJ9.mr2Mp17CVkAuYk7tp4XJtre_9S2XqKi9ZZY92ZDe2NWJ6HH5gfHrx6HL3paAbQoLodUUFmzfpGOvmilvYJgh7yS3c3BQpX463rkfp5e8mbEshQnHa_YAUt1GgabPR5iUrplKPLoDceRDwX8HIS6G2WiLxn4kkCmWS15tSNenDuQV393ddKoayjhNasuBLcF2y72ywqo9fL10UheLGq_8S7eEcXjckxj7jbxoMMePaA8v5M-MGf8GZDb3dIz-TK6tnzaANGckUP6V_sGKMTe6fuNqoQRdTqbbo3TB3uLFNbysAC0RphM3KsI4J6o9LvjEO8AuAdUkRQGi5z32IjUFqQ";
 
@@ -116,7 +117,7 @@ class Faspex5Service {
         "application/json",
         true
       );
-      const url = `${FASPEX_GATEWAY_HOST}/aspera/faspex/api/v5/packages`;
+      const url = `${FASPEX_HOST}/aspera/faspex/api/v5/packages`;
       const faspexRecipientsObject: { name: string }[] = [];
       for (const recipient of recipients) {
         faspexRecipientsObject.push({ name: recipient });

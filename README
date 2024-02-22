@@ -1,0 +1,16 @@
+This repository is to demonstrate the problem with using the aspera HTTP Gateway SDK in combination with a NodeJS application.
+It seems that the @ibm-aspera/http-gateway-sdk-js is meant to work in the browser.
+
+As of nodejs v18 and higher the fetch part works ok, versions prior to this needs a fix in the @ibm-aspera/http-gateway-sdk-js package where you incluse a const fetch = require('node-fetch'); line at the beginning of the helper file http.js. This needs to be done in combination with node-fetch@2 in the nodejs application running on a node version < v18. Anyway, the package can be compiled when using NodeJS V18 and higher.
+
+Initializing the http-gateway works, but when uploading a file, the package requires a document context.
+
+Use this package as follows.
+-clone the package on a system with node JS v18 or higher installed
+-npm install on the package
+-enter a valid value in index.js for the following variables:
+    FASPEX_GATEWAY_HOST
+    FASPEX_HOST
+    BEARER_TOKEN
+-run the following to see that the gateway is succesfully initialized but fails at the upload stage.
+npm run test.
